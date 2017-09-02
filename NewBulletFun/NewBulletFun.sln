@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBulletFun", "NewBulletFun.csproj", "{ED7D9A26-4744-F6AB-4B2B-247574C6AFAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED7D9A26-4744-F6AB-4B2B-247574C6AFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7D9A26-4744-F6AB-4B2B-247574C6AFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7D9A26-4744-F6AB-4B2B-247574C6AFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7D9A26-4744-F6AB-4B2B-247574C6AFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
