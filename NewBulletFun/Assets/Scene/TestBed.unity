@@ -260,6 +260,8 @@ GameObject:
   - component: {fileID: 1096942852}
   - component: {fileID: 1096942851}
   - component: {fileID: 1096942853}
+  - component: {fileID: 1096942854}
+  - component: {fileID: 1096942855}
   m_Layer: 0
   m_Name: BulletTester
   m_TagString: Untagged
@@ -278,14 +280,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b105d572ee9ce742baba54994628c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 0.01
-  timeBetweenSprays: 0.08
+  timeBetweenShots: 0.1
+  timeBetweenSprays: 0.1
   bulletObject: {fileID: 1075581074167602, guid: 69c8798acc1839b4cb86ef976dd1dbbc,
     type: 2}
   numBulletsPerSpray: 5
-  angleChangePerShot: 2
-  angleChangePerSpray: 20
+  angleChangePerShot: 6
+  angleChangePerSpray: 45
   rotationDirection: 1
+  minimumAngle: 4
 --- !u!4 &1096942852
 Transform:
   m_ObjectHideFlags: 0
@@ -305,19 +308,61 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1096942850}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33780eade3f56394e9bf3e6b55dc67c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenShots: 0.01
-  timeBetweenSprays: 0.08
+  timeBetweenSprays: 0.1
   bulletObject: {fileID: 1075581074167602, guid: 69c8798acc1839b4cb86ef976dd1dbbc,
     type: 2}
   numBulletsPerSpray: 5
-  angleChangePerShot: 3
-  angleChangePerSpray: 10
+  angleChangePerShot: 6
+  angleChangePerSpray: 45
   rotationDirection: 1
+--- !u!114 &1096942854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1096942850}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4be612f6a24e548ace634701d9b762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenSprays: 1
+  bulletObject: {fileID: 1075581074167602, guid: 69c8798acc1839b4cb86ef976dd1dbbc,
+    type: 2}
+  angleChangePerShot: 5
+  rotationDirection: 1
+--- !u!114 &1096942855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1096942850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229a9d19875a35c4988046ab4a697b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenSprays: 4
+  timeBetweenLayers: 0.5
+  bulletObject: {fileID: 1075581074167602, guid: 69c8798acc1839b4cb86ef976dd1dbbc,
+    type: 2}
+  numSpray: 5
+  numBulletLayers: 3
+  numBulletsPerLayer: 20
+  firstLayerBulletSpeed: 1
+  layerSpeedIncrementValue: 1
+  positiveColourMaterial: {fileID: 2100000, guid: b5728c10340b722479d41f21671c7d50,
+    type: 2}
+  negativeColourMaterial: {fileID: 2100000, guid: ca64cef60f8f76d499bdd5e7c4aa34e1,
+    type: 2}
+  angleChangePerShot: 4
+  startingAngle: 60
 --- !u!1 &1609528165
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,20 +411,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
