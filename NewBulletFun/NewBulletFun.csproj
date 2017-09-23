@@ -80,7 +80,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BulletCleaner.cs" />
     <Compile Include="Assets\Scripts\BulletLogic\RegularStraightBullet.cs" />
-    <Compile Include="Assets\Scripts\PatternScripts\FancyStuffAKAImitated\NightBird.cs" />
+    <Compile Include="Assets\Scripts\PatternScripts\FancyStuffAKAImitated\EoSD\NightBird.cs" />
     <Compile Include="Assets\Scripts\PatternScripts\Fixed\AllRoundSpray.cs" />
     <Compile Include="Assets\Scripts\PatternScripts\Fixed\CircularSpray.cs" />
     <Compile Include="Assets\Scripts\PatternScripts\Fixed\DoubleCircularSpray.cs" />

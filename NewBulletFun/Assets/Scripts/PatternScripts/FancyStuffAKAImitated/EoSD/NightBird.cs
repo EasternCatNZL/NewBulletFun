@@ -33,6 +33,8 @@ public class NightBird : MonoBehaviour {
     public float angleChangePerShot = 4.0f;
     [Tooltip("Starting angle in releation to self")]
     public float startingAngle = 40.0f;
+    [Tooltip("Slight angle alteration")]
+    public float slightAngleAlteration = 0.7f;
 
     //control vars
     private int currentRotationDireciton = 1; //current rotation of spray
@@ -42,6 +44,7 @@ public class NightBird : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //StartCoroutine(BulletSprayRoutine());
+        //print(transform.rotation.y);
     }
 	
 	// Update is called once per frame
@@ -67,7 +70,7 @@ public class NightBird : MonoBehaviour {
             for (int j = 0; j < numBulletLayers; j++)
             {
                 //make a storage angle
-                float angle = startingAngle * currentRotationDireciton;
+                float angle = (startingAngle * currentRotationDireciton) + (slightAngleAlteration * currentRotationDireciton * j);
 
                 //for all bullets in the layer
                 for (int k = 0; k < numBulletsPerLayer; k++)
@@ -75,7 +78,7 @@ public class NightBird : MonoBehaviour {
                     //create a shot
                     //get the current angle as a quaternion
                     Quaternion newRotation = new Quaternion();
-                    newRotation.eulerAngles = new Vector3(0.0f, transform.rotation.y + angle, 0.0f);
+                    newRotation.eulerAngles = new Vector3(0.0f, transform.eulerAngles.y + angle, 0.0f);
                     //create a bullet clone, and orient it using the current angle
                     GameObject bulletClone = Instantiate(bulletObject, transform.position, newRotation);
                     //change the material of clone based on direction
